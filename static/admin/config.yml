@@ -1,0 +1,68 @@
+backend:
+  name: git-gateway
+  repo: NGUYENVANDUVN/tbcvn-website
+  branch: main
+  
+media_library:
+  name: gcs
+  config:
+    bucket: "tbcvn-media"
+    path: "images/palette"
+    projectId: "quan-ly-san-xuat-tbc"
+    apiKey: "AIzaSyCZsq54XmTRfH5TSS6z2owAn3_7bzjyJNw"
+    auth:
+      clientId: "418027391607-j4ku1qgce1ob4ufdj97h5bevu3uc212t.apps.googleusercontent.com"
+      
+media_folder: "static/img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  - name: "blog_vi"
+    label: "Blog (Tiếng Việt)"
+    folder: "content/blog/vi"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Tiêu đề", name: "title", widget: "string"}
+      - {label: "Ngày đăng", name: "date", widget: "datetime"}
+      - {label: "Ảnh bìa", name: "image", widget: "image", required: false}
+      - {label: "Nội dung", name: "body", widget: "markdown"}
+
+  - name: "blog_en"
+    label: "Blog (English)"
+    folder: "content/blog/en"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      
+  - name: "palette_vi" # <-- ĐÃ SỬA LẠI CĂN LỀ
+    label: "Bảng Màu (Tiếng Việt)"
+    folder: "content/palette/vi"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Tên loại màu", name: "title", widget: "string"}
+      - {label: "Thứ tự hiển thị", name: "weight", widget: "number", default: 10}
+      - {label: "Mô tả ngắn", name: "description", widget: "text", required: false}
+      - label: "Gallery Ảnh"
+        name: "images"
+        widget: "list"
+        field: {label: "Ảnh", name: "image", widget: "image"}
+
+  - name: "palette_en"
+    label: "Color Palette (English)"
+    folder: "content/palette/en"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Color Category Name", name: "title", widget: "string"}
+      - {label: "Display Order", name: "weight", widget: "number", default: 10}
+      - {label: "Short Description", name: "description", widget: "text", required: false}
+      - label: "Image Gallery"
+        name: "images"
+        widget: "list"
+        field: {label: "Image", name: "image", widget: "image"}

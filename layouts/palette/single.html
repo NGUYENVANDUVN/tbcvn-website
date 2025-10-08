@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="container" style="padding: 40px 15px;">
+    <h1 class="page-title">{{ .Title }}</h1>
+    <p style="text-align: center; max-width: 600px; margin: -20px auto 40px auto;">{{ .Params.description }}</p>
+    <div class="gallery-grid">
+        {{ range .Params.images }}
+        <div class="gallery-item">
+            <img src="{{ .image }}" alt="{{ $.Title }}">
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

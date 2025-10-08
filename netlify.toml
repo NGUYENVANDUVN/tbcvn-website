@@ -1,0 +1,10 @@
+# File: netlify.toml
+
+[build]
+  publish = "public"
+  command = "hugo --gc --minify"
+
+[context.production.environment]
+  HUGO_VERSION = "0.151.0" # <-- Phiên bản Hugo bạn đang dùng
+  HUGO_ENV = "production"
+  HUGO_ENABLE_GIT_INFO = "true"

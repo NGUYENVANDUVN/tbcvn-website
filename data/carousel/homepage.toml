@@ -1,0 +1,7 @@
+# File: data/carousel/homepage.toml
+
+[[item]]
+  title = "Where Craftsmanship Meets Elegance"
+  description = "<h3>Expertly Crafted for Timeless Quality</h3><p>At TBC Furniture, we blend tradition and innovation to create exceptional furniture components.</p>"
+  image = "img/hero-background.jpg"
+  weight = 1

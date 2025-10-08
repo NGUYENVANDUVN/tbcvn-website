@@ -1,0 +1,109 @@
+# File: hugo.toml (PHIÊN BẢN CUỐI CÙNG - SỬA LỖI ĐA NGÔN NGỮ)
+
+baseurl = "https://tbcvn.net"
+title = "TBC Furniture Company Ltd"
+defaultContentLanguage = "vi"
+
+# DÒNG QUAN TRỌNG NHẤT ĐƯỢC THÊM VÀO ĐÂY
+defaultContentLanguageInSubdir = true
+
+# --- CÁC THÔNG SỐ CHUNG ---
+[params]
+    author = "TBC Furniture"
+    defaultDescription = "Expertly Crafted for Timeless Quality"
+    copyright = "Bản quyền © 2025, TBC Furniture"
+    logo_text = "TBC Furniture"
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+
+# --- CẤU HÌNH CHO TỪNG NGÔN NGỮ ---
+[languages]
+  # --- TIẾNG VIỆT ---
+  [languages.vi]
+    title = "Công ty TNHH Nội thất TBC"
+    languageName = "Tiếng Việt"
+    weight = 1
+    [languages.vi.menu]
+      [[languages.vi.menu.main]]
+        name = "Trang chủ"
+        url = "/"
+        weight = 1
+      [[languages.vi.menu.main]]
+        name = "Giới thiệu"
+        url = "/about/"
+        weight = 2
+      [[languages.vi.menu.main]]
+        name = "Sản phẩm"
+        url = "/portfolio/"
+        weight = 3
+    [[languages.vi.menu.main]]
+        name = "Bảng Màu"
+        url = "/palette/vi/"
+        weight = 4
+      [[languages.vi.menu.main]]
+        name = "Blog"
+        url = "/blog/vi/"
+        weight = 5
+      [[languages.vi.menu.main]]
+        name = "Liên hệ"
+        url = "/contact/"
+        weight = 6
+      [[languages.vi.menu.topbar]]
+        name = "Facebook"
+        url = "https://facebook.com/your-page"
+        weight = 1
+        pre = "<i class='fab fa-facebook'></i>"
+      [[languages.vi.menu.topbar]]
+        name = "Instagram"
+        url = "https://instagram.com/your-profile"
+        weight = 2
+        pre = "<i class='fab fa-instagram'></i>"
+
+  # --- TIẾNG ANH ---
+  [languages.en]
+    title = "TBC Furniture Company Ltd"
+    languageName = "English"
+    weight = 2
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+      [[languages.en.menu.main]]
+        name = "About"
+        url = "/about/"
+        weight = 2
+      [[languages.en.menu.main]]
+        name = "Portfolio"
+        url = "/portfolio/"
+        weight = 3
+      [[languages.en.menu.main]]
+        name = "Color Pattern"
+        url = "/palette/en/"
+        weight = 4
+      [[languages.en.menu.main]]
+        name = "Blog"
+        url = "/blog/en/"
+        weight = 5
+      [[languages.en.menu.main]]
+        name = "Contact"
+        url = "/contact/"
+        weight = 6
+      [[languages.en.menu.topbar]]
+        name = "Facebook"
+        url = "https://facebook.com/your-page"
+        weight = 1
+        pre = "<i class='fab fa-facebook'></i>"
+      [[languages.en.menu.topbar]]
+        name = "Instagram"
+        url = "https://instagram.com/your-profile"
+        weight = 2
+        pre = "<i class='fab fa-instagram'></i>"
+
+# --- CẤU HÌNH CHO PHÉP HIỂN THỊ HTML ---
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

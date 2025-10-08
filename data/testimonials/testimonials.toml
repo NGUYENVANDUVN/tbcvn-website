@@ -1,0 +1,7 @@
+# File: data/testimonials/testimonials.toml
+
+[[item]]
+  name = "Our Mission"
+  title = "Commitment to Quality"
+  image = "img/craftsmanship-detail.jpg"
+  text = "Our mission is to deliver durable, elegant solutions using cement and poly resin, embodying our commitment to quality and craftsmanship."

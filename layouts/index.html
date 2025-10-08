@@ -1,0 +1,167 @@
+{{ define "main" }}
+
+<style>
+    /* CSS của bạn giữ nguyên, không cần thay đổi */
+    :root {
+        --dark-color: #2c3e50; --light-color: #ffffff; --background-light: #f9f9f9;
+        --accent-color: #bfa78a; --text-color: #5a5a5a;
+    }
+    .main-container { font-family: 'Helvetica Neue', Arial, sans-serif; }
+    h1, h2, h3 { font-family: 'Georgia', serif; color: var(--dark-color); }
+    .section { padding: 80px 0; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 15px; }
+    .hero {
+        position: relative; height: 80vh; display: flex; align-items: center; justify-content: center;
+        text-align: center; color: var(--light-color);
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/hero-background.jpg');
+        background-size: cover; background-position: center;
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 800px; }
+    .hero h1 { font-size: 4em; color: var(--light-color); margin-bottom: 0.2em; }
+    .hero p { font-size: 1.2em; opacity: 0.9; margin-bottom: 1.5em; }
+    .cta-button {
+        background-color: var(--accent-color); color: var(--light-color); padding: 15px 35px;
+        text-decoration: none; font-weight: bold; border-radius: 5px; transition: all 0.3s ease;
+    }
+    .cta-button:hover { background-color: #a88d6c; }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .intro-text h2 { font-size: 2.8em; margin-bottom: 20px; }
+    .intro-text p { color: var(--text-color); line-height: 1.8; }
+    .intro-image img { width: 100%; border-radius: 5px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .features-section { background-color: var(--background-light); }
+    .section-title { text-align: center; margin-bottom: 60px; }
+    .section-title h2 { font-size: 2.8em; }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+    .feature-card {
+        position: relative; color: white; min-height: 350px; border-radius: 5px;
+        overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end;
+        padding: 25px; background-size: cover; background-position: center; transition: transform 0.3s ease;
+    }
+    .feature-card:hover { transform: translateY(-10px); }
+    .feature-card::after {
+        content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.1));
+    }
+    .feature-card-content { position: relative; z-index: 2; }
+    .feature-card h3 { color: white; font-size: 1.6em; margin-bottom: 10px; }
+    .feature-card p { color: rgba(255,255,255,0.9); }
+    .parallax-cta {
+        padding: 100px 0; text-align: center; color: white;
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/cta-bg.jpg');
+        background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;
+    }
+    .parallax-cta h2 { color: white; font-size: 2.8em; margin-bottom: 20px; }
+    .parallax-cta p { max-width: 600px; margin: 0 auto 30px auto; font-size: 1.1em; opacity: 0.9; }
+    .product-showcase { text-align: center; }
+    .product-showcase h2 { font-size: 2.8em; margin-bottom: 60px; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; text-align: left; }
+    .product-item {
+        background-color: white; border-radius: 5px; overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: all 0.3s ease;
+    }
+    .product-item:hover { transform: translateY(-10px); box-shadow: 0 15px 25px rgba(0,0,0,0.12); }
+    .product-item img { width: 100%; height: 250px; object-fit: cover; }
+    .product-item-content { padding: 25px; }
+    .product-item h3 { font-size: 1.5em; margin-top: 0; margin-bottom: 10px; }
+    .product-item p { color: var(--text-color, #5a5a5a); line-height: 1.6; }
+    @media (max-width: 768px) {
+        .intro-grid { grid-template-columns: 1fr; }
+        .hero h1 { font-size: 2.5em; }
+    }
+</style>
+<div class="main-container">
+    <section class="hero">
+        <div class="hero-content">
+            <h1>{{ .Params.hero_title }}</h1>
+            <p>{{ .Params.hero_subtitle }}</p>
+            <a href="/contact/" class="cta-button">{{ .Params.hero_cta_text }}</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <h2>{{ .Params.intro_title }}</h2>
+                    <p>{{ .Params.intro_text }}</p>
+                </div>
+                <div class="intro-image">
+                    <img src="/img/craftsmanship-detail.jpg" alt="Nghệ thuật chế tác nội thất TBC">
+                </div>
+            </div>
+        </div>
+   
+    </section>
+       <section class="section product-showcase">
+    <div class="container">
+        <h2>{{ .Params.products_title }}</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="/img/product-table-tops.jpg" alt="Mặt bàn xi măng và nhựa poly">
+                <div class="product-item-content">
+                    <h3>{{ .Params.product_1_title }}</h3>
+                    <p>{{ .Params.product_1_text }}</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="/img/product-bases-legs.jpg" alt="Chân bàn và đế trang trí">
+                <div class="product-item-content">
+                    <h3>{{ .Params.product_2_title }}</h3>
+                    <p>{{ .Params.product_2_text }}</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="/img/product-custom.jpg" alt="Sản phẩm tùy chỉnh theo yêu cầu">
+                <div class="product-item-content">
+                    <h3>{{ .Params.product_3_title }}</h3>
+                    <p>{{ .Params.product_3_text }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <section class="section features-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>{{ .Params.features_title }}</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" style="background-image: url('/img/feature-detailing.jpg');">
+                    <div class="feature-card-content">
+                        <h3>{{ .Params.feature_1_title }}</h3>
+                        <p>{{ .Params.feature_1_text }}</p>
+                    </div>
+                </div>
+                <div class="feature-card" style="background-image: url('/img/feature-aesthetics.jpg');">
+                    <div class="feature-card-content">
+                        <h3>{{ .Params.feature_2_title }}</h3>
+                        <p>{{ .Params.feature_2_text }}</p>
+                    </div>
+                </div>
+                <div class="feature-card" style="background-image: url('/img/feature-durability.jpg');">
+                    <div class="feature-card-content">
+                        <h3>{{ .Params.feature_3_title }}</h3>
+                        <p>{{ .Params.feature_3_text }}</p>
+                    </div>
+                </div>
+                <div class="feature-card" style="background-image: url('/img/feature-expertise.jpg');">
+                    <div class="feature-card-content">
+                        <h3>{{ .Params.feature_4_title }}</h3>
+                        <p>{{ .Params.feature_4_text }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="parallax-cta">
+        <div class="container">
+            <h2>{{ .Params.cta_title }}</h2>
+            <p>{{ .Params.cta_text }}</p>
+            <a href="/portfolio/" class="cta-button">{{ .Params.cta_button_text }}</a>
+        </div>
+    </section>
+</div>
+{{ end }}

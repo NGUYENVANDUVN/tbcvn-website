@@ -1,0 +1,28 @@
+---
+title: Home Page
+params:
+  hero_title: "Where Craftsmanship Meets Elegance"
+  hero_subtitle: "Expertly Crafted for Timeless Quality"
+  hero_cta_text: "Contact Us"
+  intro_title: "Tradition & Innovation"
+  intro_text: "At TBC Furniture, we blend tradition and innovation to create exceptional furniture components. Our mission is to deliver durable, elegant solutions using cement and poly resin, embodying our commitment to quality and craftsmanship."
+  features_title: "Why Choose TBC Furniture?"
+  feature_1_title: "Precision Detailing"
+  feature_1_text: "Each piece is meticulously crafted for flawless quality."
+  feature_2_title: "Modern Aesthetics"
+  feature_2_text: "Our products blend contemporary styles with timeless elegance."
+  feature_3_title: "Durability & Strength"
+  feature_3_text: "Using premium materials, we ensure lasting resilience."
+  feature_4_title: "Artisan Expertise"
+  feature_4_text: "Our team combines traditional techniques and modern innovations."
+  products_title: "Our Products"
+  product_1_title: "Table Tops"
+  product_1_text: "A variety of round, square, and rectangular table tops crafted from cement or poly resin with unique stone patterns and high durability."
+  product_2_title: "Bases & Legs"
+  product_2_text: "We provide various types of table legs, lamp bases, and pedestals in diverse designs, from classic to modern, ensuring stability."
+  product_3_title: "Custom Designs"
+  product_3_text: "We manufacture furniture components based on custom drawings and requirements, bringing creative ideas to life."
+  cta_title: "Let's Build Something Timeless"
+  cta_text: "Contact us to discover how TBC Furniture's components can elevate your project."
+  cta_button_text: "View Projects"
+---

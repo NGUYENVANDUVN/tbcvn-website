@@ -1,0 +1,28 @@
+---
+title: Trang Chủ
+params:
+  hero_title: "Nơi tay nghề tinh xảo hòa quyện cùng vẻ sang trọng"
+  hero_subtitle: "Tinh xảo trong từng chi tiết, trường tồn theo năm tháng"
+  hero_cta_text: "Liên Hệ Ngay"
+  intro_title: "Truyền Thống & Đổi Mới"
+  intro_text: "Tại TBC Furniture, chúng tôi kết hợp giữa truyền thống và sự đổi mới để tạo ra các cấu phần nội thất đặc biệt. Sứ mệnh của chúng tôi là mang đến những giải pháp bền bỉ, thanh lịch bằng xi măng và nhựa poly, thể hiện cam kết về chất lượng và tay nghề thủ công."
+  features_title: "Tại Sao Chọn TBC Furniture?"
+  feature_1_title: "Precision Detailing"
+  feature_1_text: "Mỗi sản phẩm được chế tác tỉ mỉ để đạt chất lượng hoàn hảo."
+  feature_2_title: "Vẻ đẹp hiện đại"
+  feature_2_text: "Hòa quyện giữa phong cách đương đại và vẻ đẹp thanh lịch vượt thời gian."
+  feature_3_title: "Bền bỉ và vững chắc"
+  feature_3_text: "Sử dụng vật liệu cao cấp, chúng tôi đảm bảo sự bền bỉ dài lâu."
+  feature_4_title: "Tinh hoa nghề thủ công"
+  feature_4_text: "Kết hợp kỹ thuật truyền thống và những cải tiến hiện đại."
+  products_title: "Sản phẩm của chúng tôi"
+  product_1_title: "Mặt bàn (Table Tops)"
+  product_1_text: "Các loại mặt bàn tròn, vuông, chữ nhật được chế tác từ xi măng hoặc nhựa poly được sơn giả vân đá độc đáo, hiện đại và thanh lịch."
+  product_2_title: "Chân bàn & Đế (Bases & Legs)"
+  product_2_text: "Cung cấp các loại chân bàn, đế đèn, đế tượng... với thiết kế đa dạng, từ cổ điển đến hiện đại, đảm bảo sự vững chãi."
+  product_3_title: "Thiết kế Tùy chỉnh (Custom Designs)"
+  product_3_text: "Nhận sản xuất các cấu phần nội thất theo bản vẽ và yêu cầu riêng của khách hàng, đáp ứng mọi ý tưởng sáng tạo."
+  cta_title: "Hãy cùng kiến tạo những giá trị vượt thời gian"
+  cta_text: "Liên hệ với chúng tôi để khám phá cách các cấu phần nội thất từ TBC Furniture có thể nâng tầm dự án của bạn."
+  cta_button_text: "Xem các dự án"
+---
