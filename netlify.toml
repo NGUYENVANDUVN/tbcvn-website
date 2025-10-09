@@ -9,7 +9,3 @@
   HUGO_ENV = "production"
   HUGO_ENABLE_GIT_INFO = "true"
   
-  [[redirects]]
-  from = "/admin"
-  to = "/controlpanel"
-  status = 301 # Chuyển hướng vĩnh viễn
